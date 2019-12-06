@@ -4,22 +4,22 @@ jQuery(document).ready(function ($) {
     /*-----------------------------------------------------------------------------------*/
     /* Variables (element selectors) */
     /*-----------------------------------------------------------------------------------*/
-    var selector_wrapper = $("#site-home"),                              // Main wrapper
-        selector_window = $(window),                                     // window
-        selector_show = ".show",                                         // selector show
-        selector_hide = ".hide",                                         // selector hide
-        class_show = "show",                                             // show class
-        class_hide = "hide",                                             // Hde class
-        class_preLoader = "preloader",                                   // Preloader class
-        selector_sticky_header = $("#sticky-header"),                    // Sticky header selector
-        selector_form = $("#myForm"),                                    // Ajax form selector
-        form_submit = selector_form.find("#form-submit-btn i.fa"),       // Submit button icon
-        form_clear = selector_form.find(".value-clear"),                 // Form input values clear class
-        mobileButton = ".nav-mobile",                                    // Mobile navigation
-        selector = ".site-nav",                                          // Header navigation
-        offCanvas = ".nav-off-canvas",                                   // Off canvas selector
-        active = "active",                                               // Active class
-        subMenu = ".site-sub-menu";                                      // sub menu
+    var selector_wrapper = $("#site-home"), // Main wrapper
+        selector_window = $(window), // window
+        selector_show = ".show", // selector show
+        selector_hide = ".hide", // selector hide
+        class_show = "show", // show class
+        class_hide = "hide", // Hde class
+        class_preLoader = "preloader", // Preloader class
+        selector_sticky_header = $("#sticky-header"), // Sticky header selector
+        selector_form = $("#myForm"), // Ajax form selector
+        form_submit = selector_form.find("#form-submit-btn i.fa"), // Submit button icon
+        form_clear = selector_form.find(".value-clear"), // Form input values clear class
+        mobileButton = ".nav-mobile", // Mobile navigation
+        selector = ".site-nav", // Header navigation
+        offCanvas = ".nav-off-canvas", // Off canvas selector
+        active = "active", // Active class
+        subMenu = ".site-sub-menu"; // sub menu
 
     /*-----------------------------------------------------------------------------------*/
     /* Template JS */
@@ -35,10 +35,10 @@ jQuery(document).ready(function ($) {
 
             // Pre-loader initialize (Plugin Options)
             $.LoadingOverlay(class_show, {
-                color : "white",        // Background Color. Default white color. You can also used hex color code. Like (#ffffff)
-                fade  : false,          // Animate the overlay div. Options (true, false)
-                image : "images/loader-purple.gif", // Animate GIF image Path
-                zIndex: 1000            // z-index value. Overlay div always stay top of the website content. Value is in integer
+                color: "white", // Background Color. Default white color. You can also used hex color code. Like (#ffffff)
+                fade: false, // Animate the overlay div. Options (true, false)
+                image: "images/loader-purple.gif", // Animate GIF image Path
+                zIndex: 1000 // z-index value. Overlay div always stay top of the website content. Value is in integer
             });
 
             // Windows load function
@@ -61,31 +61,31 @@ jQuery(document).ready(function ($) {
             new Swiper("#quick-view-slider", {
 
                 // Changeable options
-                loop               : true,                  // Set to true to enable continuous loop mode.
-                initialSlide       : 1,                     // Index number of initial slide.
-                pagination         : "#quick-view-paging",  // String with CSS selector or HTML element of the container with pagination
-                nextButton         : "#quick-view-next",    // String with CSS selector or HTML element of the element that will work like "next" button after click on it
-                prevButton         : "#quick-view-prev",    // String with CSS selector or HTML element of the element that will work like "prev" button after click on it
-                paginationClickable: true,                  // If true then clicking on pagination button will cause transition to appropriate slide. Only for bullets pagination type
-                slidesPerView      : 5,                     // Number of slides per view (slides visible at the same time on slider's container).
-                spaceBetween       : 20,                    // Distance between slides in px.
+                loop: true, // Set to true to enable continuous loop mode.
+                initialSlide: 1, // Index number of initial slide.
+                pagination: "#quick-view-paging", // String with CSS selector or HTML element of the container with pagination
+                nextButton: "#quick-view-next", // String with CSS selector or HTML element of the element that will work like "next" button after click on it
+                prevButton: "#quick-view-prev", // String with CSS selector or HTML element of the element that will work like "prev" button after click on it
+                paginationClickable: true, // If true then clicking on pagination button will cause transition to appropriate slide. Only for bullets pagination type
+                slidesPerView: 5, // Number of slides per view (slides visible at the same time on slider's container).
+                spaceBetween: 20, // Distance between slides in px.
 
                 // Responsive breakpoints
                 breakpoints: {
                     // when window width is <= 500px
                     "500": {
-                        slidesPerView     : 1,              // Number of slides per view (slides visible at the same time on slider's container).
-                        spaceBetweenSlides: 0               // Distance between slides in px.
+                        slidesPerView: 1, // Number of slides per view (slides visible at the same time on slider's container).
+                        spaceBetweenSlides: 0 // Distance between slides in px.
                     },
                     // when window width is <= 767px
                     "767": {
-                        slidesPerView     : 2,              // Number of slides per view (slides visible at the same time on slider's container).
-                        spaceBetweenSlides: 20              // Distance between slides in px.
+                        slidesPerView: 2, // Number of slides per view (slides visible at the same time on slider's container).
+                        spaceBetweenSlides: 20 // Distance between slides in px.
                     },
                     // when window width is <= 992px
                     "991": {
-                        slidesPerView     : 3,              // Number of slides per view (slides visible at the same time on slider's container).
-                        spaceBetweenSlides: 20              // Distance between slides in px.
+                        slidesPerView: 3, // Number of slides per view (slides visible at the same time on slider's container).
+                        spaceBetweenSlides: 20 // Distance between slides in px.
                     }
                 }
             });
@@ -101,29 +101,29 @@ jQuery(document).ready(function ($) {
             new Swiper("#team-slider", {
 
                 // Changeable options
-                loop               : true,                  // Set to true to enable continuous loop mode.
-                initialSlide       : 1,                     // Index number of initial slide.
-                pagination         : "#team-paging",        // String with CSS selector or HTML element of the container with pagination
-                nextButton         : "#team-next",          // String with CSS selector or HTML element of the element that will work like "next" button after click on it
-                prevButton         : "#team-prev",          // String with CSS selector or HTML element of the element that will work like "prev" button after click on it
-                paginationClickable: true,                  // If true then clicking on pagination button will cause transition to appropriate slide. Only for bullets pagination type
-                slidesPerView      : 3,                     // Number of slides per view (slides visible at the same time on slider's container).
-                spaceBetween       : 20,                    // Distance between slides in px.
-                speed              : 1000,                  // Duration of transition between slides (in ms)
-                autoplay           : 1000,
+                loop: true, // Set to true to enable continuous loop mode.
+                initialSlide: 0, // Index number of initial slide.
+                pagination: "#team-paging", // String with CSS selector or HTML element of the container with pagination
+                nextButton: "#team-next", // String with CSS selector or HTML element of the element that will work like "next" button after click on it
+                prevButton: "#team-prev", // String with CSS selector or HTML element of the element that will work like "prev" button after click on it
+                paginationClickable: true, // If true then clicking on pagination button will cause transition to appropriate slide. Only for bullets pagination type
+                slidesPerView: 3, // Number of slides per view (slides visible at the same time on slider's container).
+                spaceBetween: 20, // Distance between slides in px.
+                speed: 1000, // Duration of transition between slides (in ms)
+                autoplay: 1000,
                 grabCursor: true,
 
                 // Responsive breakpoints
                 breakpoints: {
                     // when window width is <= 500px
                     "600": {
-                        slidesPerView     : 1,              // Number of slides per view (slides visible at the same time on slider's container).
-                        spaceBetweenSlides: 0               // Distance between slides in px.
+                        slidesPerView: 1, // Number of slides per view (slides visible at the same time on slider's container).
+                        spaceBetweenSlides: 0 // Distance between slides in px.
                     },
                     // when window width is <= 767px
                     "991": {
-                        slidesPerView     : 2,              // Number of slides per view (slides visible at the same time on slider's container).
-                        spaceBetweenSlides: 20              // Distance between slides in px.
+                        slidesPerView: 2, // Number of slides per view (slides visible at the same time on slider's container).
+                        spaceBetweenSlides: 20 // Distance between slides in px.
                     }
                 }
             });
@@ -151,14 +151,14 @@ jQuery(document).ready(function ($) {
 
             // Plugin initialize
             $.scrollUp({
-                scrollDistance: 300,                              // Distance from top/bottom before showing element (px)
-                scrollFrom    : "top",                            // 'top' or 'bottom'
-                scrollSpeed   : 1000,                             // Speed back to top (ms)
-                easingType    : "linear",                         // Scroll to top easing (see http://easings.net/)
-                animation     : "fade",                           // Fade, slide, none
-                animationSpeed: 400,                              // Animation in speed (ms)
-                scrollText    : "<i class='fa fa-angle-up'></i>", // Text for element, can contain HTML (font awesome icon)
-                zIndex        : 10000                             // Z-Index for the overlay
+                scrollDistance: 300, // Distance from top/bottom before showing element (px)
+                scrollFrom: "top", // 'top' or 'bottom'
+                scrollSpeed: 1000, // Speed back to top (ms)
+                easingType: "linear", // Scroll to top easing (see http://easings.net/)
+                animation: "fade", // Fade, slide, none
+                animationSpeed: 400, // Animation in speed (ms)
+                scrollText: "<i class='fa fa-angle-up'></i>", // Text for element, can contain HTML (font awesome icon)
+                zIndex: 10000 // Z-Index for the overlay
             });
         },
 
@@ -211,11 +211,11 @@ jQuery(document).ready(function ($) {
 
                 // Submit the form using AJAX.
                 $.ajax({
-                    type: "POST",               // Post type
-                    url : self.attr("action"),  // Form action url
-                    data: self.serialize()      // serialize the form data
-                })
-                // Mail success
+                        type: "POST", // Post type
+                        url: self.attr("action"), // Form action url
+                        data: self.serialize() // serialize the form data
+                    })
+                    // Mail success
                     .done(function () {
 
                         // alert on success
@@ -250,10 +250,10 @@ jQuery(document).ready(function ($) {
         header_navigation: function (current) {
 
             // Changeable options
-            this.offCanvas_show_speed = 500;    // Off canvas menu show speed. Value is in milliseconds
-            this.offCanvas_hide_speed = 500;    // Off canvas menu hide speed. Value is in milliseconds
-            this.slide_down_speed = 400;        // Down down slide down speed. Value is in milliseconds
-            this.slide_up_speed = 400;          // Drop down slide up speed. Value is in milliseconds
+            this.offCanvas_show_speed = 500; // Off canvas menu show speed. Value is in milliseconds
+            this.offCanvas_hide_speed = 500; // Off canvas menu hide speed. Value is in milliseconds
+            this.slide_down_speed = 400; // Down down slide down speed. Value is in milliseconds
+            this.slide_up_speed = 400; // Drop down slide up speed. Value is in milliseconds
 
             // this
             current = this;
@@ -281,26 +281,26 @@ jQuery(document).ready(function ($) {
 
                     // show the menu
                     $(selector).find(offCanvas).animate({
-                        "left": "0"
-                    }, current.offCanvas_show_speed, function () {
+                            "left": "0"
+                        }, current.offCanvas_show_speed, function () {
 
-                        // Call icon change function
-                        current.icon_change(self);
+                            // Call icon change function
+                            current.icon_change(self);
 
-                    })
-                    // active class
+                        })
+                        // active class
                         .addClass(active);
                 } else {
 
                     // hide the menu
                     $(selector).find(offCanvas).animate({
-                        "left": "-1000px"
-                    }, current.offCanvas_hide_speed, function () {
+                            "left": "-1000px"
+                        }, current.offCanvas_hide_speed, function () {
 
-                        // Call icon change function
-                        current.icon_change(self);
-                    })
-                    // remove class
+                            // Call icon change function
+                            current.icon_change(self);
+                        })
+                        // remove class
                         .removeClass(active);
                 }
 
@@ -322,14 +322,14 @@ jQuery(document).ready(function ($) {
 
                     // hide the menu
                     $(selector).find(offCanvas).animate({
-                        "left": "-1000px"
-                    }, current.offCanvas_hide_speed, function () {
+                            "left": "-1000px"
+                        }, current.offCanvas_hide_speed, function () {
 
-                        // Call icon change function
-                        current.icon_change($(mobileButton));
+                            // Call icon change function
+                            current.icon_change($(mobileButton));
 
-                    })
-                    // remove class
+                        })
+                        // remove class
                         .removeClass(active);
 
                 }
@@ -351,14 +351,14 @@ jQuery(document).ready(function ($) {
 
                     // Hide the menu
                     $(selector).find(offCanvas).animate({
-                        "left": "-1000px"
-                    }, current.offCanvas_hide_speed, function () {
+                            "left": "-1000px"
+                        }, current.offCanvas_hide_speed, function () {
 
-                        // Call icon change function
-                        current.icon_change($(mobileButton));
+                            // Call icon change function
+                            current.icon_change($(mobileButton));
 
-                    })
-                    // remove class
+                        })
+                        // remove class
                         .removeClass(active);
                 }
 
@@ -392,22 +392,22 @@ jQuery(document).ready(function ($) {
         }
     };
 
-	/*-----------------------------------------------------------------------------------*/
+    /*-----------------------------------------------------------------------------------*/
     /* wow animation */
     /*-----------------------------------------------------------------------------------*/
-	new WOW().init();
+    new WOW().init();
 
     /*-----------------------------------------------------------------------------------*/
     /* Call Functions */
     /*-----------------------------------------------------------------------------------*/
-    Template_JS.pre_loader();               // Call pre-loader function
-    Template_JS.quick_view_section();       // Call quick view section function
-    Template_JS.team_section();             // Call team section function
-    Template_JS.sticky_header();            // Call sticky header function
-    Template_JS.scroll_top();               // Call scroll top function
-    Template_JS.internal_scroll_links();    // Call internal scroll link function
-    Template_JS.ajax_contact_form();        // Call ajax contact form function
-    Template_JS.header_navigation();        // Call header navigation function
-    Template_JS.twitter_feed();             // Call twitter feed function
+    Template_JS.pre_loader(); // Call pre-loader function
+    Template_JS.quick_view_section(); // Call quick view section function
+    Template_JS.team_section(); // Call team section function
+    Template_JS.sticky_header(); // Call sticky header function
+    Template_JS.scroll_top(); // Call scroll top function
+    Template_JS.internal_scroll_links(); // Call internal scroll link function
+    Template_JS.ajax_contact_form(); // Call ajax contact form function
+    Template_JS.header_navigation(); // Call header navigation function
+    Template_JS.twitter_feed(); // Call twitter feed function
 
 });

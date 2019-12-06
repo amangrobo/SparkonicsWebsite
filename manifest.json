@@ -1,0 +1,14 @@
+{
+  "short_name": "Sparkonics",
+  "name": "Sparkonics",
+  "icons": [
+    {
+      "src": "./images/sparkonics_app_icon.png",
+      "type": "image/x-icon"
+    }
+  ],
+  "start_url": "./index.html",
+  "display": "standalone",
+  "theme_color": "#1ab999",
+  "background_color": "#ffffff"
+}
