@@ -190,6 +190,9 @@ jQuery(document).ready(function ($) {
                 paginationClickable: true,                  // If true then clicking on pagination button will cause transition to appropriate slide. Only for bullets pagination type
                 slidesPerView      : 3,                     // Number of slides per view (slides visible at the same time on slider's container).
                 spaceBetween       : 20,                    // Distance between slides in px.
+                speed              : 1000,                  // Duration of transition between slides (in ms)
+                autoplay           : 1000,
+                grabCursor: true,
 
                 // Responsive breakpoints
                 breakpoints: {
