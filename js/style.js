@@ -14,7 +14,7 @@ jQuery(document).ready(function ($) {
         selector_sticky_header = $("#sticky-header"),                    // Sticky header selector
         selector_statistic = $("#site-statistic").find(".site-number"),  // Statistic section selector
         selector_accordion = $(".panel-group").find(".panel-body"),      // Statistic section selector
-        header_slider = document.getElementById("header-slider"),        // Header slider ID selector
+        // header_slider = document.getElementById("header-slider"),        // Header slider ID selector
         selector_form = $("#myForm"),                                    // Ajax form selector
         form_submit = selector_form.find("#form-submit-btn i.fa"),       // Submit button icon
         form_clear = selector_form.find(".value-clear"),                 // Form input values clear class
@@ -60,33 +60,7 @@ jQuery(document).ready(function ($) {
          * Documentation: http://sequencejs.com/documentation/#options
          * Source: http://sequencejs.com */
         /*-----------------------------------------------------------------------------------*/
-        header_slider: function (options) {
-
-            // Changeable Options
-            options = {
-                animateCanvas                 : false,  // Whether Sequence.js should automatically control the canvas animation when a step is navigated to.
-                phaseThreshold                : false,  // Whether there should be a delay between the current step animating out and the next step animating in.
-                fadeStepWhenSkipped           : true,   // If a step is skipped before it finishes animating, cause it to fade out over a specific period of time
-                reverseWhenNavigatingBackwards: true,   // Whether animations should be reversed when a user navigates backwards by clicking a previous button/swiping/pressing the left key.
-                autoPlay                      : true,   // Automatically navigate
-                swipeNavigation               : true,   // Whether to allow the user to navigate between steps by swiping left and right on touch enabled devices.
-                swipeEvents                   : {       // The public Sequence.js method that should occur when the user swipes in a particular direction.
-                    left : function (sequence) {
-
-                        // When the user swipes left, the Sequence.js event self.prev() is initiated.
-                        sequence.prev();
-                    },
-                    right: function (sequence) {
-
-                        // When the user swipes right, the Sequence.js event self.next() is initiated.
-                        sequence.next();
-                    }
-                }
-            };
-
-            // Launch Sequence on the element, and with the options we specified above
-            sequence(header_slider, options);
-        },
+       
 
 
         /*-----------------------------------------------------------------------------------*/
@@ -557,7 +531,7 @@ jQuery(document).ready(function ($) {
     /* Call Functions */
     /*-----------------------------------------------------------------------------------*/
     Template_JS.pre_loader();               // Call pre-loader function
-    Template_JS.header_slider();            // Call header slider function
+    // Template_JS.header_slider();            // Call header slider function
     Template_JS.how_it_works_section();     // Call how it works function
     Template_JS.quick_view_section();       // Call quick view section function
     Template_JS.accordion_section();        // Call accordion section function
