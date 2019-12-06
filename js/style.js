@@ -129,6 +129,25 @@ jQuery(document).ready(function ($) {
             });
         },
 
+        testimonial_section: function () {
+
+            /* Plugin initialize (Unique ID selector) */
+            new Swiper("#testimonial-slider", {
+
+                // Changeable options
+                loop               : true,                  // Set to true to enable continuous loop mode.
+                initialSlide       : 0,                     // Index number of initial slide.
+                pagination         : "#testimonial-paging", // String with CSS selector or HTML element of the container with pagination
+                nextButton         : "#testimonial-next",   // String with CSS selector or HTML element of the element that will work like "next" button after click on it
+                prevButton         : "#testimonial-prev",   // String with CSS selector or HTML element of the element that will work like "prev" button after click on it
+                paginationClickable: true,                  // If true then clicking on pagination button will cause transition to appropriate slide. Only for bullets pagination type
+                slidesPerView      : 1,                     // Number of slides per view (slides visible at the same time on slider's container).
+                spaceBetween       : 20,                    // Distance between slides in px.
+                speed              : 1000,                  // Duration of transition between slides (in ms)
+                autoplay           : 3000,                  // Delay between transitions (in ms). If this parameter is not specified, auto play will be disabled
+                grabCursor         : true,
+            });
+        },
 
         /*-----------------------------------------------------------------------------------*/
         /* Sticky Header changeable options
@@ -403,6 +422,7 @@ jQuery(document).ready(function ($) {
     Template_JS.pre_loader(); // Call pre-loader function
     Template_JS.quick_view_section(); // Call quick view section function
     Template_JS.team_section(); // Call team section function
+    Template_JS.testimonial_section();      // Call testimonial section function
     Template_JS.sticky_header(); // Call sticky header function
     Template_JS.scroll_top(); // Call scroll top function
     Template_JS.internal_scroll_links(); // Call internal scroll link function

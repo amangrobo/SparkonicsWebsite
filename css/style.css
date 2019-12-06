@@ -1068,6 +1068,182 @@ button[type=submit]:hover {
 
 /*-----------------------------------------------------------------------------------
 
+[Testimonial] (Section)
+
+# Testimonial (wrapper)
+# Quote
+# Images
+# Typography (p, h5)
+# Carousel pagination
+# Carousel navigation
+# Carousel container
+
+-----------------------------------------------------------------------------------*/
+/* Testimonial wrapper */
+.site-testimonial {
+  margin: 0;
+  display: block;
+  width: 100%;
+  clear: both;
+  overflow: visible;
+  padding-bottom:150px;
+  position: relative;
+}
+
+@media screen and (max-width: 991px) {
+  .site-testimonial {
+
+  }
+  
+}
+
+.site-testimonial .testimonial-quote {
+  /* Quote */
+  color: white;
+  font-family: inherit;
+  font-size: 4.563rem;
+  font-weight: 700;
+  width: 6.125rem;
+  height: 6.125rem;
+  background-color: #55a3e0;
+  border-radius: 12.5rem;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: -1.875rem;
+}
+
+@media screen and (max-width: 991px) {
+  .site-testimonial .testimonial-quote {
+    background-color: #2b8dd9;
+  }
+}
+
+.site-testimonial .testimonial-quote span {
+  display: inline-block;
+}
+
+.site-testimonial figure {
+  /* Image */
+  display: block;
+  width:90px;
+  height: 90px;
+  overflow: hidden;
+  border-radius: 12.5rem;
+  padding: 0.313rem;
+  background:#FFFFFF;
+  margin: 0 auto;
+  border:#d8dde4 solid 4px;
+  
+}
+
+.site-testimonial figure img {
+  border-radius: 12.5rem;
+  display: block;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+	
+}
+
+.site-testimonial p {
+  /* Typography */
+  width:100%;
+  color: #708198;
+  font-family: inherit;
+  font-size:15px;
+  font-weight: normal;
+  line-height:2;
+  padding:30px 0 0 0;
+  display: block;
+  clear:both;
+  text-align:center;
+}
+
+.site-testimonial h5 {
+  color: #15bcd2;
+  font-family: inherit;
+  font-size:17px;
+  font-weight:600;
+  line-height: 1.5;
+  margin:0;
+  padding:20px 0 0 0;
+  display: block;
+  width: 100%;
+  text-align:center;
+}
+
+.swiper-slide .testimonial-degignation {
+  color: #708198;
+  font-family: inherit;
+  font-size:14px;
+  font-weight:500;
+  line-height: 1.5;
+  margin:0;
+  padding:0 0 0 0;
+  display: block;
+  width: 100%;
+  text-align:center;
+}
+
+.site-testimonial .swiper-pagination {
+  /* Carousel pagination */
+  margin-top:20px;
+}
+
+.site-testimonial .swiper-button-prev, .site-testimonial .swiper-button-next {
+  /* Carousel navigation */
+  margin-top: 2.5rem;
+}
+
+@media screen and (min-width: 768px) {
+  .site-testimonial .swiper-button-prev, .site-testimonial .swiper-button-next {
+    left: 0;
+  }
+  
+  
+}
+
+@media screen and (max-width: 767px) {
+  .site-testimonial .swiper-button-prev, .site-testimonial .swiper-button-next {
+    margin-top: 3.75rem;
+    top: 0;
+  }
+  
+  .site-testimonial figure {
+	  text-align:center;
+	  clear:both;
+  }
+  
+  .site-testimonial h5 {
+	  width:100%;
+	  text-align:center;
+	  padding-left:0;
+	  clear:both;
+  }
+  
+  .swiper-slide .testimonial-degignation {
+	  width:100%;
+	  text-align:center;
+	  padding-left:0;
+	  clear:both;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .site-testimonial .swiper-button-next {
+    left: auto;
+    right: 0;
+  }
+}
+
+.site-testimonial .swiper-container {
+  /* Carousel container */
+  margin-top:0;
+}
+
+/*-----------------------------------------------------------------------------------
+
 [Amazing Features]
 
 # Amazing feature (wrapper)
