@@ -12,9 +12,6 @@ jQuery(document).ready(function ($) {
         class_hide = "hide",                                             // Hde class
         class_preLoader = "preloader",                                   // Preloader class
         selector_sticky_header = $("#sticky-header"),                    // Sticky header selector
-        selector_statistic = $("#site-statistic").find(".site-number"),  // Statistic section selector
-        selector_accordion = $(".panel-group").find(".panel-body"),      // Statistic section selector
-        // header_slider = document.getElementById("header-slider"),        // Header slider ID selector
         selector_form = $("#myForm"),                                    // Ajax form selector
         form_submit = selector_form.find("#form-submit-btn i.fa"),       // Submit button icon
         form_clear = selector_form.find(".value-clear"),                 // Form input values clear class
@@ -53,44 +50,6 @@ jQuery(document).ready(function ($) {
             });
 
         },
-
-
-        /*-----------------------------------------------------------------------------------*/
-        /* Header Slider: This function contain the header slider options.
-         * Documentation: http://sequencejs.com/documentation/#options
-         * Source: http://sequencejs.com */
-        /*-----------------------------------------------------------------------------------*/
-       
-
-
-        /*-----------------------------------------------------------------------------------*/
-        /* How it work section changeable options
-         * Source: http://idangero.us/swiper/api/ */
-        /*-----------------------------------------------------------------------------------*/
-        how_it_works_section: function () {
-
-            /* Plugin initialize (Unique ID selector) */
-            new Swiper("#how-it-works-slider", {
-
-                // Changeable options
-                loop               : true,                   // Set to true to enable continuous loop mode.
-                initialSlide       : 2,                      // Index number of initial slide.
-                pagination         : "#how-it-works-paging", // String with CSS selector or HTML element of the container with pagination
-                nextButton         : "#how-it-works-next",   // String with CSS selector or HTML element of the element that will work like "next" button after click on it
-                prevButton         : "#how-it-works-prev",   // String with CSS selector or HTML element of the element that will work like "prev" button after click on it
-                paginationClickable: true,                   // If true then clicking on pagination button will cause transition to appropriate slide. Only for bullets pagination type
-                speed              : 1000,                   // Duration of transition between slides (in ms)
-
-                paginationBulletRender: function (index, className) {
-                    /* This parameter allows totally customize pagination bullets,
-                     you need to pass here a function that accepts index number of
-                     pagination bullet and required element class name (className).
-                     Only for bullets pagination type */
-                    return "<span class=\"" + className + "\"><span class='" + $("#how-it-works-paging").data("icons")[index] + "'></span></span>";
-                }
-            });
-        },
-
 
         /*-----------------------------------------------------------------------------------*/
         /* Quick view section changeable options
@@ -132,20 +91,6 @@ jQuery(document).ready(function ($) {
             });
         },
 
-
-        /*-----------------------------------------------------------------------------------*/
-        /* Accordion section custom scroll bar
-         * Source: http://manos.malihu.gr/jquery-custom-content-scroller/ */
-        /*-----------------------------------------------------------------------------------*/
-        accordion_section: function () {
-
-            // Custom scroll bar for accordion section
-            selector_accordion.mCustomScrollbar({
-                scrollInertia: 0
-            });
-        },
-
-
         /*-----------------------------------------------------------------------------------*/
         /* Team Section changeable options
          * Source: http://idangero.us/swiper/api/ */
@@ -181,43 +126,6 @@ jQuery(document).ready(function ($) {
                         spaceBetweenSlides: 20              // Distance between slides in px.
                     }
                 }
-            });
-        },
-
-
-        /*-----------------------------------------------------------------------------------*/
-        /* Testimonial section changeable options
-         * Source: http://idangero.us/swiper/api/ */
-        /*-----------------------------------------------------------------------------------*/
-        testimonial_section: function () {
-
-            /* Plugin initialize (Unique ID selector) */
-            new Swiper("#testimonial-slider", {
-
-                // Changeable options
-                loop               : true,                  // Set to true to enable continuous loop mode.
-                initialSlide       : 1,                     // Index number of initial slide.
-                pagination         : "#testimonial-paging", // String with CSS selector or HTML element of the container with pagination
-                nextButton         : "#testimonial-next",   // String with CSS selector or HTML element of the element that will work like "next" button after click on it
-                prevButton         : "#testimonial-prev",   // String with CSS selector or HTML element of the element that will work like "prev" button after click on it
-                paginationClickable: true,                  // If true then clicking on pagination button will cause transition to appropriate slide. Only for bullets pagination type
-                slidesPerView      : 1,                     // Number of slides per view (slides visible at the same time on slider's container).
-                spaceBetween       : 20,                    // Distance between slides in px.
-                speed              : 1000,                  // Duration of transition between slides (in ms)
-                autoplay           : 4000                   // Delay between transitions (in ms). If this parameter is not specified, auto play will be disabled
-            });
-        },
-
-
-        /*-----------------------------------------------------------------------------------*/
-        /* Statistic section changeable options
-         * Source: https://github.com/benignware/jquery-countimator */
-        /*-----------------------------------------------------------------------------------*/
-        statistic_section: function () {
-
-            /* Plugin initialize */
-            selector_statistic.countimator({
-                duration: 2000 // Specifies the animation duration in milliseconds. Defaults to 1400
             });
         },
 
@@ -481,44 +389,6 @@ jQuery(document).ready(function ($) {
                 }
 
             });
-        },
-
-
-        /*-----------------------------------------------------------------------------------*/
-        /* Twitter Feed changeable options
-         * Source: https://github.com/sonnyt/Tweetie
-         * Go to folder (php > twitter > config.php) open this file
-         * and add the twitter api key */
-        /*-----------------------------------------------------------------------------------*/
-        twitter_feed: function () {
-
-            /* PLUGIN INITIALIZE */
-            $(".tweet").twittie({
-                dateFormat : "%b %d, %Y",               // date format
-                template   : "" +                       // template HTML structure
-                "<p>{{tweet}}</p>" +
-                "<div class='date'>{{date}}</div>",
-                count      : 3,                         // Number of tweets show
-                loadingText: "Loading!",                // Text show before tweets load
-                apiPath    : "php/twitter/tweet.php"    // Tweet PHP file path used for user information.
-            }, function () {
-
-                /* Plugin initialize (Unique ID selector) */
-                new Swiper("#tweet-slider", {
-
-                    // Changeable options
-                    loop               : true,                  // Set to true to enable continuous loop mode.
-                    initialSlide       : 1,                     // Index number of initial slide.
-                    pagination         : "#tweet-paging",       // String with CSS selector or HTML element of the container with pagination
-                    nextButton         : "#tweet-next",         // String with CSS selector or HTML element of the element that will work like "next" button after click on it
-                    prevButton         : "#tweet-prev",         // String with CSS selector or HTML element of the element that will work like "prev" button after click on it
-                    paginationClickable: true,                  // If true then clicking on pagination button will cause transition to appropriate slide. Only for bullets pagination type
-                    slidesPerView      : 1,                     // Number of slides per view (slides visible at the same time on slider's container).
-                    spaceBetween       : 20,                    // Distance between slides in px.
-                    speed              : 1000,                  // Duration of transition between slides (in ms)
-                    autoplay           : 4000                   // Delay between transitions (in ms). If this parameter is not specified, auto play will be disabled
-                });
-            });
         }
     };
 
@@ -531,13 +401,8 @@ jQuery(document).ready(function ($) {
     /* Call Functions */
     /*-----------------------------------------------------------------------------------*/
     Template_JS.pre_loader();               // Call pre-loader function
-    // Template_JS.header_slider();            // Call header slider function
-    Template_JS.how_it_works_section();     // Call how it works function
     Template_JS.quick_view_section();       // Call quick view section function
-    Template_JS.accordion_section();        // Call accordion section function
     Template_JS.team_section();             // Call team section function
-    Template_JS.testimonial_section();      // Call testimonial section function
-    Template_JS.statistic_section();        // Call statistic section function
     Template_JS.sticky_header();            // Call sticky header function
     Template_JS.scroll_top();               // Call scroll top function
     Template_JS.internal_scroll_links();    // Call internal scroll link function
